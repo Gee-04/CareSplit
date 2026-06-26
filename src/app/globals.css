@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070810;
+  --surface: #0f1018;
+  --surface-2: #171923;
+  --border: #1e2130;
+  --border-2: #262a3a;
+  --text: #f0f2ff;
+  --text-muted: #7c85a8;
+  --text-dim: #4a5270;
+  --accent: #6c63ff;
+  --accent-light: #8b85ff;
+  --accent-dim: #6c63ff22;
+  --green: #22c55e;
+  --green-dim: #22c55e15;
+  --amber: #f59e0b;
+  --red: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent-light);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Input resets */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a { color: inherit; text-decoration: none; }
