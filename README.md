@@ -37,7 +37,15 @@ This app fixes all of that.
 
 ```bash
 git clone <repo>
-cd family-support-wallet
+cd CareSplit
+
+## Creat a new .env file and fill it with the below
+DATABASE_URL=file:./family-wallet.db
+NEXTAUTH_SECRET=your_secret_here
+NEXTAUTH_URL=http://localhost:3000
+
+
+
 npm install
 
 cp .env.example .env
