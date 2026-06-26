@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Family Support Wallet
 
 A cross-border family remittance app built on Open Payments / Interledger Protocol. Migrant workers send money home with automatic splitting, spending controls, and daily streaming allowances — at ~1.5% fees vs the industry standard 8%.
@@ -114,3 +115,7 @@ Replace `simulateOpenPaymentsFlow()` with the real `@interledger/open-payments` 
 ---
 
 Built for the Open Payments hackathon. May your packets always find a route.
+=======
+# CareSplit
+Sharing money across borders with loved ones
+>>>>>>> ac0be3d9a624823ad1d5366e6aeb1c5897f4790c
