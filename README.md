@@ -1,11 +1,13 @@
 <<<<<<< HEAD
+
 # Family Support Wallet
 
-A cross-border family remittance app built on Open Payments / Interledger Protocol. Migrant workers send money home with automatic splitting, spending controls, and daily streaming allowances — at ~1.5% fees vs the industry standard 8%.
+A cross-border family remittance app built on Open Payments / Interledger Protocol. Migrant workers send money home with automatic splitting, spending controls, and daily streaming allowances at ~1.5% fees vs the industry standard 8%.
 
 ## The problem it solves
 
 Thandi is a nurse in London supporting her mother and two children in Khayelitsha, Cape Town. Every month she:
+
 - Pays ~8% in transfer fees (R1,440/year lost)
 - Makes three separate transfers and phone calls
 - Has no way to ensure Sipho doesn't blow his allowance in the first week
@@ -15,12 +17,12 @@ This app fixes all of that.
 
 ## Features
 
-- **OTP authentication** — signup verification + login OTP + payment confirmation
-- **Automatic split payments** — one transfer splits to N family members under a single Open Payments grant
-- **Spending rules** — vouchers restricted to specific categories, liquor store blocking
-- **Daily streaming allowances** — Sipho's R200 allowance drips R10/day over 20 school days
-- **Low fees** — ~1.5% via ILP vs 8% via Western Union / bank transfer
-- **Payment history** — full audit trail per family member
+- **OTP authentication** - signup verification + login OTP + payment confirmation
+- **Automatic split payments** - one transfer splits to N family members under a single Open Payments grant
+- **Spending rules** - vouchers restricted to specific categories, liquor store blocking
+- **Daily streaming allowances** - Sipho's R200 allowance drips R10/day over 20 school days
+- **Low fees** - ~1.5% via ILP vs 8% via Western Union / bank transfer
+- **Payment history** - full audit trail per family member
 
 ## Tech stack
 
@@ -39,7 +41,7 @@ cd family-support-wallet
 npm install
 
 cp .env.example .env
-# Edit .env — at minimum set JWT_SECRET
+# Edit .env - at minimum set JWT_SECRET
 
 # Push DB schema
 npx drizzle-kit push
@@ -54,6 +56,7 @@ npm run dev
 Open http://localhost:3000
 
 Demo credentials:
+
 - Email: `thandi@demo.com`
 - Password: `password123`
 - OTP: printed to terminal (dev mode)
@@ -103,19 +106,26 @@ src/
 
 The production flow in `src/lib/payments.ts` mirrors the full Open Payments protocol:
 
-1. **Discovery** — resolve wallet addresses for sender and each receiver
-2. **Incoming payments** — create an incoming payment on each family member's wallet
-3. **Quote** — get a quote for the total GBP → ZAR
-4. **Interactive grant** — redirect Thandi for consent (one approval covers all splits)
-5. **Outgoing payments** — create N outgoing payments under the single grant
-6. **Recurring grant** — Sipho's daily R10 uses an interval grant: `R20/2026-06-01T06:00:00Z/P1D`
+1. **Discovery** - resolve wallet addresses for sender and each receiver
+2. **Incoming payments** - create an incoming payment on each family member's wallet
+3. **Quote** - get a quote for the total GBP → ZAR
+4. **Interactive grant** - redirect Thandi for consent (one approval covers all splits)
+5. **Outgoing payments** - create N outgoing payments under the single grant
+6. **Recurring grant** - Sipho's daily R10 uses an interval grant: `R20/2026-06-01T06:00:00Z/P1D`
 
 Replace `simulateOpenPaymentsFlow()` with the real `@interledger/open-payments` client calls when connecting to a live wallet provider.
 
 ---
 
-Built for the Open Payments hackathon. May your packets always find a route.
-=======
+# Built for the Open Payments hackathon. May your packets always find a route.
+
 # CareSplit
+
 Sharing money across borders with loved ones
->>>>>>> ac0be3d9a624823ad1d5366e6aeb1c5897f4790c
+<<<<<<< HEAD
+
+> > > > > > > # ac0be3d9a624823ad1d5366e6aeb1c5897f4790c
+
+## Local Setup
+
+> > > > > > > origin/main
